@@ -5,7 +5,7 @@ import * as display from './display.mjs';
 function handleSearch() {
     const query = document.getElementById('search-input').value;
     api.searchBooks(query).then(books => {
-        display.displayBooks(books, 'search');
+        display.displayBooks(books);
     });
 }
 
@@ -13,7 +13,7 @@ function handleSearch() {
 function handleCategoryChange() {
     const category = document.getElementById('category-select').value;
     api.getPopularBooks(category).then(books => {
-        display.displayCarousel(books, 'popular', 'category-carousel');
+        display.displayCarousel(books,  'category-carousel');
     });
 }
 

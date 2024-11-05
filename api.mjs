@@ -5,7 +5,7 @@ const API_URL = 'https://www.googleapis.com/books/v1/volumes';
 // Function to search for books
 export async function searchBooks(query) {
     try {
-        const response = await axios.get(`${API_URL}?q=${query}`);
+        const response = await axios.get(`${API_URL}?q=${query}&maxResults=5`);
         return response.data.items || [];
     } catch (error) {
         console.error('Error fetching books:', error);

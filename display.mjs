@@ -1,7 +1,7 @@
 import { getReadingList, addToReadingList } from './api.mjs';
 
-// Function to display books in a specific context (search or popular)
-export function displayBooks(books, context) {
+// Function to display books in a specific context 
+export function displayBooks(books) {
     const bookList = document.getElementById('book-list');
     bookList.innerHTML = '';
 
@@ -11,6 +11,7 @@ export function displayBooks(books, context) {
     }
 
     books.forEach(book => {
+        console.log(book)
         const title = book.volumeInfo.title || 'Unknown Title';
         const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author';
         const description = book.volumeInfo.description || 'No description available';
@@ -43,7 +44,7 @@ export function displayBooks(books, context) {
 
 
 // Function to display popular books in a carousel
-export function displayCarousel(books, context, carousel_type) {
+export function displayCarousel(books, carousel_type) {
     const carousel = document.getElementById(carousel_type);
     carousel.innerHTML = ''; // Clear previous carousel items
 
