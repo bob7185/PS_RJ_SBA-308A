@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tracker App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <main class="container">
+        
+        <!-- Section 1: Category Selection and Popular Books Carousel -->
+        <section>
+            <h1 class="header">Book Tracker</h1>
+            <div class="category-section">
+                <label for="category-select">Choose a category:</label>
+                <select id="category-select">
+                    <option value="fiction">Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="technology">Technology</option>
+                    <option value="biography">Biography</option>
+                </select>
+            </div>
+            <h2 class="sub-header">Top Books in Selected Category</h2>
+            <div id="category-carousel" class="carousel"></div>
+        </section>
+
+        <!-- Section 2: Search and Search Results Carousel -->
+        <section>
+            <h2 class="sub-header">Search for Books</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for books..." />
+                <button id="search-button">Search</button>
+            </div>
+            <div id="book-list"></div>
+            <div id="search-carousel" class="carousel"></div>
+        </section>
+
+        <!-- Section 3: User's Reading List -->
+        <section>
+            <h2 class="sub-header">Your Reading List</h2>
+            <div id="reading-list" class="reading-list"></div>
+        </section>
+    </main>
+</body>
+<script type="module" src="app.js"></script>
+
+</html>

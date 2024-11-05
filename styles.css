@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header, .sub-header {
+    text-align: center;
+    color: #333;
+}
+
+.header {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sub-header {
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+}
+
+/* Search Box Styles */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #4cae4c;
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.carousel-item {
+    min-width: 200px;
+    margin: 0 10px;
+    background: #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Book List Styles */
+.book-list, .reading-list {
+    margin-top: 20px;
+}
+
+.book-item, .reading-list-item {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book-item button, .reading-list-item button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.book-item button:hover, .reading-list-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Details Styles */
+#book-details {
+    display: none;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-hidden {
+    display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    #search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        min-width: 100%;
+    }
+}
