@@ -14,6 +14,7 @@ export function displayCarousel(books, carousel_type) {
     const carousel = document.getElementById(carousel_type);
     carousel.innerHTML = ''; // Clear previous carousel items
     books.forEach(book => {
+        console.log(book)
         const title = book.volumeInfo.title || 'Unknown Title';
         const authors = book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'Unknown Author';
         const description = book.volumeInfo.description || 'No description available';

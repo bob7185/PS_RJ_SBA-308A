@@ -14,6 +14,7 @@ function handleCategoryChange() {
     const category = document.getElementById('category-select').value;
     api.getPopularBooks(category).then(books => {
         display.displayCarousel(books,  'category-carousel');
+        display.displayCarousel(books,  'category-carousel');
     });
 }
 
