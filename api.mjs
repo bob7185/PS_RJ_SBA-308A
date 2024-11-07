@@ -1,5 +1,7 @@
 import { displayReadingList} from "./display.mjs";
 
+
+
 const API_URL = 'https://www.googleapis.com/books/v1/volumes';
 
 // Function to search for books
@@ -26,6 +28,7 @@ export async function getPopularBooks(category) {
 
 // Function to add a book to the reading list
 export function addToReadingList(book) {
+    // 
     const readingList = getReadingList();
     readingList.push(book);
     localStorage.setItem('readingList', JSON.stringify(readingList));
